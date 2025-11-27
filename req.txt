@@ -1,0 +1,8 @@
+1) create server folder
+2)in terminal  cd server ->npm init create packages
+3)create file index.js(entryfile)
+4)install packages (express,mongoose,nodemon,cors)
+    npm i express
+
+  express-> it is a framework that helps to handle requests and response
+  app=express()-> app is the instance of express,

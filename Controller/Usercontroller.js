@@ -1,7 +1,7 @@
 const Users = require("../Models/UserModel")
 const bcrypt=require("bcryptjs")  //hash the password
 const jwt=require('jsonwebtoken')    //
-const SECRET_KEY="mernstack";
+const SECRET=process.env.SECRET_KEY;
 
 // post the user details
 const Adduser = async(req,res) =>{
@@ -83,7 +83,7 @@ const Login = async (req, res) => {
       return res.json({ success: false, message: "Invalid credentials" });
     }
 
-    const Token = jwt.sign({ id: matcheduser.id }, SECRET_KEY);
+    const Token = jwt.sign({ id: matcheduser.id }, SECRET);
 
     res.json({
       success: true,

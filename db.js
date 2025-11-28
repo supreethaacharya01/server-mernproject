@@ -1,6 +1,7 @@
 const mongoose=require("mongoose")
+require('dotenv').config()
 
-const mongoURL="mongodb://localhost:27017/crud"  //we get this path from the mogocampas and we have to name the dabase name
+const mongoURL=process.env.URI //we get this path from the mogocampas and we have to name the dabase name
 
 const connectToMongo=async()=>{
     try{
